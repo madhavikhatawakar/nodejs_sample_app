@@ -5,4 +5,6 @@ WORKDIR nodejs_sample_app
 COPY app.js .
 COPY package.json .
 COPY node_modules .
-CMD node app.js
+
+ENTRYPOINT ["pm2-docker", "start","app.js"]
+
